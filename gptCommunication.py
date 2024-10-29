@@ -1,5 +1,5 @@
 from openai import OpenAI
-client = OpenAI(api_key="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")
+client = OpenAI(api_key="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")
 
 content = '''Patient – Good Morning, doctor. May I come in?
 Doctor – Good Morning. How are you? You do look quite pale this morning.
@@ -24,4 +24,4 @@ completion = client.chat.completions.create(
     ]
 )
 
-print(completion.choices[0].message)
+print(completion.choices[0].message['content'])
