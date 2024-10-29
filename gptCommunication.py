@@ -1,6 +1,8 @@
 from openai import OpenAI
 client = OpenAI(api_key="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")
 
+# add code that allows for the speech --> text conversion
+
 content = '''Patient – Good Morning, doctor. May I come in?
 Doctor – Good Morning. How are you? You do look quite pale this morning.
 Patient – Yes, doctor. I’ve not been feeling well for the past few days. I’ve been having a stomach ache for a few days and feeling a bit dizzy since yesterday.
@@ -24,4 +26,4 @@ completion = client.chat.completions.create(
     ]
 )
 
-print(completion.choices[0].message['content'])
+print(completion.choices[0].message.content)
