@@ -40,5 +40,5 @@ completion = client.chat.completions.create(
     ]
 )
 
-print('text --> Response:')
+print('\ntext --> Response:')
 print(completion.choices[0].message.content)
